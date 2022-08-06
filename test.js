@@ -1,9 +1,12 @@
-function createFunction() {
-  function multiplyBy2(num) {
-    return num * 2;
+function outer() {
+  let counter = 0;
+  function incrementCounter() {
+    counter++;
   }
-  return multiplyBy2;
+  console.log(counter);
+  return incrementCounter;
 }
 
-const generatedFunc = createFunction();
-const result = generatedFunc(3); // 6
+const myNewFunction = outer();
+myNewFunction();
+myNewFunction();

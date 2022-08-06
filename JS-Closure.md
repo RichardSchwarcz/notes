@@ -32,6 +32,7 @@ This example shows, how we can "memoize" values inside of functions. This functi
 ```
 
 Lets execute this `outer()` function step by step
+
 ![Closure diagram](/assets/closureDiagram.png "closureDiagram")
 
 - Line 1 - We define `outer()` function in **_global memory_**

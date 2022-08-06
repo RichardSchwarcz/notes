@@ -6,4 +6,4 @@ function createFunction() {
 }
 
 const generatedFunc = createFunction();
-const result = generatedFunc(3);
+const result = generatedFunc(3); // 6

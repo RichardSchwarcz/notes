@@ -1,19 +1,7 @@
-function display(data) {
-  console.log(data);
-}
+const people = [{ name: "Jack" }, { name: "Ryso" }];
 
-function printHello() {
-  console.log("Hello");
-}
+const Ryso = people.filter((obj) => obj.name == "Ryso");
+Ryso;
+const R = people.filter((obj) => obj.name.startsWith("R"));
 
-function blockFor300ms() {
-  //.... Computational process or something
-}
-
-setTimeout(printHello, 0);
-
-const futureData = fetch("https://twitter.com/ryso/tweets/1");
-futureData.then(display);
-
-blockFor300ms();
-console.log("Me first!");
+R;

@@ -1,6 +1,13 @@
+<style>
+r { color: #f54842 }    /*h2*/
+o { color: Orange }     /*h3*/
+g { color: Green }      /*h4*/
+my { background: #ffdc6e4d }
+</style>
+
 # Destructuring
 
-## Array destructuring examples
+## <r>Array destructuring examples</r>
 
 In Array we acces values by indexes, therefore positions does matter. Also, we can provide default values using `=`
 
@@ -48,7 +55,7 @@ const [
 console.log(first) // 10
 ```
 
-### Nested array destructuring
+### <o>Nested array destructuring</o>
 
 ```JS
 function data() {
@@ -67,7 +74,7 @@ const [
 
 Again we are providing an empty array, in case we would get `undefined` instead of `[2,3]`.
 
-### Swapping variables
+### <o>Swapping variables</o>
 
 Without destructuring, swapping variables would look something like this:
 
@@ -91,7 +98,7 @@ var y = 20;
 [x, y] = [y, x];
 ```
 
-# Object destructuring examples
+## <r>Object destructuring examples</r>
 
 Since in object we access values by keys (properties), positions doesn't matter. What matters are keys (properties). Later we can reasign them as you can see in this example:
 
@@ -110,7 +117,7 @@ var {
 
 Again we also provided default values, in case `data()` returns undefined. Also we made `rest` variable to catch rest of the values. `rest` returns an **_object_**, in this case `{d: 4, e: 5}`. Same as with arrays, we insured ourselves that we dont get type error in case `data()` doesn't return an object, by using `||` and providing default value in form of empty object.
 
-### Nested object destructuring
+### <o>Nested object destructuring</o>
 
 ```JS
 function data() {
@@ -128,9 +135,7 @@ const {
   } = data() || {};
 ```
 
-### Named arguments
-
-Example
+### <o>Named arguments</o>
 
 ```JS
 function lookupRecord({

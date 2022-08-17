@@ -1,6 +1,13 @@
+<style>
+r { color: #f54842 }    /*h2*/
+o { color: Orange }     /*h3*/
+g { color: Green }      /*h4*/
+my { background: #ffdc6e4d }
+</style>
+
 # Async&Promises
 
-## Web API
+## <r>Web API</r>
 
 Here are some **_Web Browser_** features. In JS we communicate with them by their "pairs".
 
@@ -10,7 +17,7 @@ Here are some **_Web Browser_** features. In JS we communicate with them by thei
 | HTML DOM         | document   |
 | Timer            | setTimeout |
 
-## Event loop
+## <r>Event loop</r>
 
 Event loop example
 
@@ -32,8 +39,6 @@ console.log("Me first!");
 // Hello
 ```
 
-Let's break down what happens under the hood
-
 ![eventLoopDiagram](/assets/eventLoop.svg)
 
 1. We define `printHello` function in global memory
@@ -50,17 +55,14 @@ Let's break down what happens under the hood
 
 Function `setTimeout` does nothing in JS, instead, it's a command to Web Browser to switch on a `Timer`. Timer, needs time and function definiton to be run.
 
-**Note :**
-
-> _Function is allowed to escape Callback Queue, once all of the synchronous code has been done. You could have infinite while loop of console logs and function in Callback Queue would never be pushed inside of a Call Stack._
+> :memo: **Note:** _Function is allowed to escape Callback Queue, once all of the synchronous code has been done. You could have infinite while loop of console logs and function in Callback Queue would never be pushed inside of a Call Stack._
 
 **Mr. EventLooper** does very fast checking:
 If there is something in a Call Stack - run it
 Once Call Stack is empty, Mr. EventLooper checks if there is something in a Callback Queue. If there is a function waiting to be run, he brings it to the Call Stack.
+**This is called Event Loop**.
 
-That checking which Mr. Event Looper does is called **Event Loop**.
-
-## Promises
+## <r>Promises</r>
 
 Promise chain example
 
@@ -85,8 +87,6 @@ futureData.then(display);
 blockFor300ms();
 console.log("Me first!");
 ```
-
-Let's break down what happens under the hood
 
 ![promiseDiagram](/assets/promises.svg)
 
@@ -115,11 +115,11 @@ Let's break down what happens under the hood
 10. At 303.5ms `display` function got poped out of the Call Stack
 11. At 304ms `printHello` function run and `'Hello'` has been logged to the console
 
-**Note :**
-
+> :memo: **Note:**
+>
 > - 3A and 3B runs simultaneously.
 > - Mr. EventLooper first checks microtask Queue and then Callbakck Queue
 
-### Legend of diagrams
+### <o>Legend of diagrams</o>
 
 ![legendDiagram](/assets/legendDiagram.svg)

@@ -1,3 +1,10 @@
+<style>
+r { color: #f54842 }    /*h2*/
+o { color: Orange }     /*h3*/
+g { color: Green }      /*h4*/
+my { background: #ffdc6e4d }
+</style>
+
 # Reduce Examples
 
 _Code provided by:_
@@ -5,7 +12,7 @@ _Code provided by:_
 > Leigh Halliday
 > https://www.youtube.com/watch?v=NiLUGy1Mh4U
 
-## Recreate reduce using for loop
+## <r>Recreate reduce using for loop</r>
 
 ```JS
 function reduce(array, callback, initial) {
@@ -20,7 +27,7 @@ result = reduce([1, 2, 3], (acc, num) => acc + num, 0);
 // result = 6
 ```
 
-## Initial Data
+## <r>Initial Data</r>
 
 ```JS
 const people = [
@@ -30,28 +37,28 @@ const people = [
 ];
 ```
 
-### Count items in array
+### <o>Count items in array</o>
 
 ```JS
 const result = people.reduce((acc, person) => acc + 1, 0);
 // result = 3
 ```
 
-### Sum ages
+### <o>Sum ages</o>
 
 ```JS
 const result = people.reduce((acc, person) => acc + person.age, 0);
 // result = 93
 ```
 
-### Array of names `.map` method using `reduce` function
+### <o>Array of names `.map` method using `reduce` function</o>
 
 ```JS
 const result = people.reduce((acc, person) => [...acc, person.name], []);
 // result = ['Leigh', 'Jenny, 'Heather']
 ```
 
-### Object of objects - Dictionary
+### <o>Object of objects - Dictionary</o>
 
 ```JS
 const result = people.reduce((acc, person) => {
@@ -64,7 +71,7 @@ const result = people.reduce((acc, person) => {
 // }
 ```
 
-### Find max age
+### <o>Find max age</o>
 
 ```JS
 const result = people.reduce((acc, person) => {
@@ -74,7 +81,7 @@ const result = people.reduce((acc, person) => {
 // result = 35
 ```
 
-### Find min age
+### <o>Find min age</o>
 
 ```JS
 const result = people.reduce((acc, person) => {
@@ -84,7 +91,7 @@ const result = people.reduce((acc, person) => {
 // result = 28
 ```
 
-### Find by name
+### <o>Find by name</o>
 
 ```JS
 const result = people.reduce((acc, person) => {
@@ -95,7 +102,7 @@ const result = people.reduce((acc, person) => {
 // result =   { id: "1", name: "Leigh", age: 35 }
 ```
 
-### Find out if every person is older than 18
+### <o>Find out if every person is older than 18</o>
 
 ```JS
 const result = people.reduce((acc, person) => {
@@ -105,7 +112,7 @@ const result = people.reduce((acc, person) => {
 // result = true
 ```
 
-### Find out if any person is older than 18
+### <o>Find out if any person is older than 18</o>
 
 ```JS
 result = people.reduce((acc, person) => {
@@ -115,7 +122,7 @@ result = people.reduce((acc, person) => {
 // result = true
 ```
 
-### Count occurrences
+### <o>Count occurrences</o>
 
 ```JS
 const orders = [
@@ -131,7 +138,7 @@ result = orders.reduce((acc, order) => {
 // result = { pending: 2, cancelled: 1, shipped: 1 }
 ```
 
-### Flatten array
+### <o>Flatten array</o>
 
 ```JS
 const folders = [
@@ -151,7 +158,7 @@ result = folders.reduce(flatten, []);
 // result = ["index.js", "flatten.js", "map.js", "any.js", "all.js", "count.js"]
 ```
 
-### Reduce with early abort
+### <o>Reduce with early abort</o>
 
 ```JS
 function reduceAbort(array, callback, initial) {

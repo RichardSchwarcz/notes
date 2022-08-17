@@ -1,4 +1,13 @@
-# Function purity
+<style>
+r { color: #f54842 }    /*h2*/
+o { color: Orange }     /*h3*/
+g { color: Green }      /*h4*/
+my { background: #ffdc6e4d }
+</style>
+
+# Functional programming overview
+
+## <r>Function purity</r>
 
 > _Instead of asking if a function is pure, better ask if a function call is pure. Function purity is not binary. It's level of confidence. -- Kyle Simpson_
 
@@ -29,7 +38,7 @@ console.log(getValue(obj))
 
 This function call is definitely not pure, as it returns different value each time we call `getValue()` function with same arguments.
 
-## Pure functions
+### <o>Pure functions</o>
 
 > _A Pure Function is a function that always returns the same result if the same arguments are passed._
 
@@ -58,7 +67,7 @@ console.log(array)
 
 Each time we call this function with same arguments, it returns same output. Also, it doesn't affect data in gloabal scope, it returns copy of an array.
 
-## Impure functions
+### <o>Impure functions</o>
 
 Example of impure functions:
 
@@ -90,7 +99,7 @@ console.log(array)
 
 Even if we call this function with same arguments, it returns different output.
 
-# Currying
+## <r>Currying</r>
 
 Currying is a transformation of functions that translates a function from callable as `f(a, b, c)` into callable as `f(a)(b)(c)`. Curried function accepts one argument.
 
@@ -117,7 +126,7 @@ function ajax(url) {
 ajax(CUSTOMER_API)({id:42})(renderCustomer)
 ```
 
-# Recursion
+## <r>Recursion</r>
 
 > _Recursive function is function that call itself._
 
@@ -139,7 +148,7 @@ countDownRecursive(3)
 // fin
 ```
 
-# Unary & Binary functions
+## <r>Unary & Binary functions</r>
 
 In functional programming we tend to care about function shapes. More specificaly about its inputs and outputs. In the name of simplicity, **unary** and **binary** functions came to play.
 
@@ -158,13 +167,13 @@ function sum(x, y) {
 Unary function - one input, one output
 Binary function - two inputs, one output
 
-# Higher order function - HOF
+## <r>Higher order function - HOF</r>
 
 HOF is a function that receives a function in one of its inputs and returns one or more functions
 
 <!-- TODO -->
 
-# Composition
+## <r>Composition</r>
 
 > _One functions output becomes second functions input_
 

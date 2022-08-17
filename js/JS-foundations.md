@@ -1,6 +1,15 @@
-# Types
+<style>
+r { color: #f54842 }    /*h2*/
+o { color: Orange }     /*h3*/
+g { color: Green }      /*h4*/
+my { background: #ffdc6e4d }
+</style>
 
-## Primitive types
+# Foundations
+
+## <r>Types</r>
+
+### <o>Primitive types</o>
 
 - undefined
 - string
@@ -33,7 +42,7 @@ _If you want to check if it's an array use `Array.isArray()`_
 `undefined` there is a variable and at the moment it has no value.
 `undeclared` it never been created in any scope we have access to.
 
-## Negative zero
+### <o>Negative zero
 
 **_Math definition:_**
 For each real number `a`, we have a number `−a`.
@@ -54,12 +63,12 @@ Object.is(trendRate, 0) //false
 
 Negative zeros are actually used in programs. To check if a value is `-0` use `Object.is`.
 
-# Coercion
+## <r>Coercion</r>
 
 Type coercion is the **_automatic or implicit conversion of values_** from one data type to another.
 **Implicit** coercion happens when JavaScript coerces the value type to the expected type under the hood. This type of coercion happens without the developer noticing. **Explicit** coercion happens when we want to coerce the value type to a specific type.
 
-## To String
+### <o>To String</o>
 
 You can use `toString()`, which returns a string representing the object.
 
@@ -84,7 +93,7 @@ console.log(
 // There are 16 students
 ```
 
-## String to number
+### <o>String to number</o>
 
 You can use `Number()` function to convert values of other types to number
 
@@ -125,7 +134,7 @@ typeof(toNumber)
 
 Insted of using `+string` it's better to use `Number(string)` which gives us same output.
 
-## Boxing
+### <o>Boxing</o>
 
 Boxing is a form of implicit coercion.
 
@@ -147,14 +156,14 @@ const studentObj = new String('Stud')
 
 String object has a property `.length`.
 
-## Coercion takeaways
+### <o>Coercion takeaways</o>
 
 - Avoid creating functions which can take many value types and do different things based on that value. Other way you risk coercion problems.
 - Its better to design a function which can take only one or two types. For ex. Numbers and strings.
 - This is why TypeScript exists, as its static typing solves this problem.
 - Its not necessary to use TypeScript everywhere, instead, keep it simple
 
-# Equality
+## <r>Equality</r>
 
 <!-- TODO
 More reasearch needed  -->
@@ -162,11 +171,11 @@ More reasearch needed  -->
 I think in React ESlint complains about using `==`, so unless you disable this check, to keep it shut you have to use `===`.
 Because we use React, for now i will stick with `===`.
 
-## Takeaway
+### <o>Takeaway</o>
 
 - Kyle made a good point about knowing types of values before you compare them. Since you know their types, he says `==` is much better option.
 
-# Scope
+## <r>Scope</r>
 
 > _JS is two-pass system_
 
@@ -218,7 +227,7 @@ let teacher = 'Suzy'
 
 > _If you use `var` instead of `let`, you dont create block scope_
 
-## Hoisting
+### <o>Hoisting</o>
 
 One example could be when we call something before its been declared.
 
@@ -235,7 +244,7 @@ function otherTeacher() {
 
 In this example, calling function `otherTeacher()` before it was declared is good and does work. Problems begin within a body of a function, where we try to log teacher in the console, before teacher was declared inside of a `otherTeacher` scope.
 
-# Closure
+## <r>Closure</r>
 
 > _Closure is when a function "remembers" its lexical scope even when the function is executed outside that lexical scope._ -- _Kyle Simpson_
 
@@ -254,9 +263,9 @@ myTeacher()
 // Suzy
 ```
 
-# Objects
+## <r>Objects</r>
 
-## _this_ keyword
+### <o>_this_ keyword</o>
 
 > A function's **_this_** references the execution context for that call, determined entirely by **_how the function was called._** -- _Kyle Simpson_
 
@@ -267,7 +276,7 @@ There are four wayst to call a function
 - As a constructor
 - As a function
 
-### Explicit binding
+#### <g>Explicit binding</g>
 
 Call a function via `.call()` method
 
@@ -304,7 +313,7 @@ ask.call(workshop, 'what is explicit binding')
 
 In this example we explicitly say that we want to invoke `ask()` function in a `workshop` context.
 
-### Implicit binding
+#### <g>Implicit binding</g>
 
 ```JS
 const workshop = {
@@ -323,7 +332,7 @@ Dont look at the function definition. All of the magic happens at the line where
 
 <!-- TODO (am i right??) -->
 
-## Arrow functions & `this`
+### <o>Arrow functions & `this`</o>
 
 ```JS
 var workshop = {
@@ -339,7 +348,7 @@ workshop.ask('What happened to this')
 
 Arrow functions dont have `this`, therefore, in this case, `this` resolves lexically. In this example `workshop` is not creating a scope, so `this` is pointing to global scope. Because in global scope there is no teacher, it returns `undefined`.
 
-# Classes
+## <r>Classes</r>
 
 Class example:
 

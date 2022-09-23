@@ -69,3 +69,17 @@ ls --fo
 ```
 
 `--foo` flag shows all files including hidden ones. For example `.git` folder.
+
+#### <g>Open in explorer</g>
+
+Open folder in explorer.
+
+```shell
+ii .
+```
+
+#### <g>Open file</g>
+
+```shell
+cat
+```
